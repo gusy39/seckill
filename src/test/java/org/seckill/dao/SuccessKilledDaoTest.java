@@ -33,6 +33,7 @@ public class SuccessKilledDaoTest {
     public void testQueryByIdWithSeckill() throws Exception {
         SuccessKilled successKilled = successKilledDao.queryByIdWithSeckill(1000L,13556899635L);
         System.out.println(successKilled);
+        System.out.println(successKilled.getSeckill());
 
     }
 }
