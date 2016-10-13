@@ -5,8 +5,8 @@
 <mapper namespace="org.seckill.dao.SuccessKilledDao">
     <!--int insertSuccessKilled(long seckillId,long userPhone);-->
 <insert id="insertSuccessKilled">
-    INSERT ignore INTO success_killed(seckill_id,user_phone)
-    VALUES (#{seckillId},#{userPhone})
+    INSERT ignore INTO success_killed(seckill_id,user_phone,state)
+    VALUES (#{seckillId},#{userPhone},0)
 </insert>
     <!--SuccessKilled queryByIdWithSeckill(long seckillId);-->
 <select id="queryByIdWithSeckill" resultType="SuccessKilled" >

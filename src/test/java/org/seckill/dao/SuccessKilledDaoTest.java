@@ -23,7 +23,7 @@ public class SuccessKilledDaoTest {
     private SuccessKilledDao successKilledDao;
     @Test
     public void testInsertSuccessKilled() throws Exception {
-        long id=1000L;
+        long id=1001L;
         long phone=13556899635L;
         int i = successKilledDao.insertSuccessKilled(id, phone);
         System.out.println(i);
