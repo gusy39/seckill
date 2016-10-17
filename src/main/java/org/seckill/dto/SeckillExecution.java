@@ -8,6 +8,16 @@ import org.seckill.enums.SeckillStatEnum;
  * Created by Administrator on 2016/10/14.
  */
 public class SeckillExecution {
+    @Override
+    public String toString() {
+        return "SeckillExecution{" +
+                "seckillId=" + seckillId +
+                ", state=" + state +
+                ", stateInfo='" + stateInfo + '\'' +
+                ", successKilled=" + successKilled +
+                '}';
+    }
+
     private long seckillId;
     //秒杀执行结果状态
     private int state;
