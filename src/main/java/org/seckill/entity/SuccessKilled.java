@@ -3,15 +3,22 @@ package org.seckill.entity;
 import java.util.Date;
 
 /**
- * Created by Administrator on 2016/10/12.
+ * Created by wchb7 on 16-5-8.
  */
 public class SuccessKilled {
-    private long seckillId;
-    private long userPhone;
-    private short state;
-    private Date createTime;
 
+    /**
+     * 一个秒杀seckill对应多个成功记录
+     */
     private Seckill seckill;
+
+    private long seckillId;
+
+    private long userPhone;
+
+    private short state;
+
+    private Date createTime;
 
     public long getSeckillId() {
         return seckillId;
@@ -56,11 +63,11 @@ public class SuccessKilled {
     @Override
     public String toString() {
         return "SuccessKilled{" +
-                "seckillId=" + seckillId +
+                "seckill=" + seckill +
+                ", seckillId=" + seckillId +
                 ", userPhone=" + userPhone +
                 ", state=" + state +
                 ", createTime=" + createTime +
-                ", seckill=" + seckill +
                 '}';
     }
 }

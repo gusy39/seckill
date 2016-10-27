@@ -3,14 +3,20 @@ package org.seckill.entity;
 import java.util.Date;
 
 /**
- * Created by Administrator on 2016/10/12.
+ * Created by wchb7 on 16-5-8.
  */
 public class Seckill {
+
     private long seckillId;
+
     private String name;
+
     private int number;
+
     private Date startTime;
+
     private Date endTime;
+
     private Date createTime;
 
     public long getSeckillId() {

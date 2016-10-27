@@ -1,10 +1,10 @@
 package org.seckill.exception;
 
 /**
- * 秒杀关闭异常
- * Created by Administrator on 2016/10/14.
+ * Created by wchb7 on 16-5-14.
  */
-public class SeckillCloseException extends SeckillException{
+public class SeckillCloseException extends SeckillException {
+
     public SeckillCloseException(String message) {
         super(message);
     }
@@ -12,4 +12,5 @@ public class SeckillCloseException extends SeckillException{
     public SeckillCloseException(String message, Throwable cause) {
         super(message, cause);
     }
+
 }

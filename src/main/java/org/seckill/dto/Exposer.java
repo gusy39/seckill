@@ -1,34 +1,31 @@
 package org.seckill.dto;
 
-/**
- * 暴露秒杀接口
- * Created by Administrator on 2016/10/14.
- */
-public class Exposer {
-    @Override
-    public String toString() {
-        return "Exposer{" +
-                "exposed=" + exposed +
-                ", md5='" + md5 + '\'' +
-                ", seckillId=" + seckillId +
-                ", now=" + now +
-                ", start=" + start +
-                ", end=" + end +
-                '}';
-    }
+import java.io.Serializable;
 
-    //是否开启秒杀
+/**
+ * 暴露秒杀地址DTO(dto:web层和service层传递数据用)
+ * Created by wchb7 on 16-5-13.
+ */
+public class Exposer implements Serializable {
+
+    private static final long serialVersionUID = 7602244494037452541L;
+
+    /**
+     * 秒杀是否开启
+     */
     private boolean exposed;
-    //一种加密措施
+
     private String md5;
 
     private long seckillId;
 
-    //系统当前时间
+    /**
+     * 系统时间(毫秒)
+     */
     private long now;
-    //开启时间
+
     private long start;
-    //结束时间
+
     private long end;
 
     public Exposer(boolean exposed, String md5, long seckillId) {
@@ -37,9 +34,9 @@ public class Exposer {
         this.seckillId = seckillId;
     }
 
-    public Exposer(boolean exposed,long seckillId, long now, long start, long end) {
+    public Exposer(boolean exposed, long seckillId, long now, long start, long end) {
         this.exposed = exposed;
-        this.seckillId=seckillId;
+        this.seckillId = seckillId;
         this.now = now;
         this.start = start;
         this.end = end;
@@ -96,5 +93,17 @@ public class Exposer {
 
     public void setEnd(long end) {
         this.end = end;
+    }
+
+    @Override
+    public String toString() {
+        return "Exposer{" +
+                "exposed=" + exposed +
+                ", md5='" + md5 + '\'' +
+                ", seckillId=" + seckillId +
+                ", now=" + now +
+                ", start=" + start +
+                ", end=" + end +
+                '}';
     }
 }
